@@ -15,6 +15,18 @@ process.on('unhandledRejection', (reason, promise) => {
   process.exit(1);
 });
 
+process.on('exit', (code) => {
+  console.log(`Process exiting with code: ${code}`);
+});
+
+process.on('SIGTERM', () => {
+  console.log('Received SIGTERM');
+});
+
+process.on('SIGINT', () => {
+  console.log('Received SIGINT');
+});
+
 // Declare a route
 fastify.get('/', async function handler (request, reply) {
   return { hello: 'world' }
