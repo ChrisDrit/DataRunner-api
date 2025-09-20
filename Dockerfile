@@ -15,8 +15,7 @@ RUN npm install
 COPY . .
 
 # Expose port 3000 (matches your Fastify server)
-#EXPOSE 3000
-EXPOSE 80
+EXPOSE 3000
 
 # Add health check
 #HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
