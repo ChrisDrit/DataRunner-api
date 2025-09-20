@@ -6,25 +6,25 @@ const fastify = Fastify({
 
 // Add error handling
 process.on('uncaughtException', (err) => {
-  console.error('Uncaught Exception:', err);
+  console.error('----------------------------------------------- Uncaught Exception:', err);
   process.exit(1);
 });
 
 process.on('unhandledRejection', (reason, promise) => {
-  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+  console.error('------------------------------------- Unhandled Rejection at:', promise, 'reason:', reason);
   process.exit(1);
 });
 
 process.on('exit', (code) => {
-  console.log(`Process exiting with code: ${code}`);
+  console.log(`------------------------------------- Process exiting with code: ${code}`);
 });
 
 process.on('SIGTERM', () => {
-  console.log('Received SIGTERM');
+  console.log('----------------------------------------- Received SIGTERM');
 });
 
 process.on('SIGINT', () => {
-  console.log('Received SIGINT');
+  console.log('------------------------------------------ Received SIGINT');
 });
 
 // Declare a route
