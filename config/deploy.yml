@@ -49,7 +49,7 @@ env:
 #
 aliases:
   shell: app exec --interactive --reuse "sh"
-  logs: app logs -f
+  logs: app logs
 
 # Use a different ssh user than root
 #

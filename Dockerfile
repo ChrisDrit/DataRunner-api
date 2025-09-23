@@ -1,7 +1,7 @@
 FROM node:22-alpine
 
-# Install curl for health checks
-RUN apk add --no-cache curl
+# Install build dependencies and curl for health checks
+RUN apk add --no-cache curl build-base python3 make g++
 
 WORKDIR /app
 
@@ -10,6 +10,9 @@ COPY package*.json ./
 
 # Install dependencies
 RUN npm install
+
+# Rebuild native modules for the container architecture
+RUN npm rebuild
 
 # Copy source code
 COPY . .
