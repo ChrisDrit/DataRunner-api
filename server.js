@@ -12,7 +12,6 @@ const fastify = Fastify({
 // Declare a route
 fastify.get('/', async function handler (request, reply) {
   logger.info('Root endpoint accessed')
-  throw new Error("This is a test error");
   return { hello: 'world' }
 })
 
