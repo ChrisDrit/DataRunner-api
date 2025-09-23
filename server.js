@@ -7,6 +7,7 @@ const fastify = Fastify({
 
 // Declare a route
 fastify.get('/', async function handler (request, reply) {
+  throw new Error("This is a test error");
   return { hello: 'world' }
 })
 

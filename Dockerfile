@@ -22,4 +22,4 @@ EXPOSE 3000
 #  CMD curl -f http://localhost:3000/ || exit 1
 
 # Start the application
-CMD ["node", "server.js"]
+CMD ["npm", "start"]

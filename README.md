@@ -1,1 +1,3 @@
 # DataRunner-api
+
+`npm start`

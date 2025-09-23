@@ -1,6 +1,11 @@
 {
   "type": "module",
+  "scripts": {
+    "start": "NODE_OPTIONS='--require source-map-support/register --require ./appsignal.cjs' node server.js"
+  },
   "dependencies": {
-    "fastify": "^5.6.0"
+    "@appsignal/nodejs": "^3.7.1",
+    "fastify": "^5.6.0",
+    "source-map-support": "^0.5.21"
   }
 }
